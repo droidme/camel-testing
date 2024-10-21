@@ -1,4 +1,4 @@
-package io.droidme.cameltesting.config;
+package io.droidme.cameltesting.hello;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

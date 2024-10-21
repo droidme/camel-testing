@@ -1,6 +1,7 @@
-package io.droidme.cameltesting.routes;
+package io.droidme.cameltesting.hello;
 
 import org.apache.camel.builder.RouteBuilder;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
  * <p/>
  * Use <tt>@Component</tt> to make Camel auto detect this route when starting.
  */
-@Component
+//@Component
 public class HelloBeanTimerRoute extends RouteBuilder {
 
     @Override

@@ -1,4 +1,4 @@
-package io.droidme.cameltesting.routes;
+package io.droidme.cameltesting.hello;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.EndpointInject;

@@ -1,6 +1,5 @@
-package io.droidme.cameltesting.beans;
+package io.droidme.cameltesting.hello;
 
-import io.droidme.cameltesting.config.HelloBeanConfig;
 import org.springframework.stereotype.Component;
 
 /**
