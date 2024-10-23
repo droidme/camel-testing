@@ -40,7 +40,6 @@ public class AdhocRouteTest {
                             .routeId("AdHocRoute")
                             .log(INFO, "Start Route ${routeId}")
                             .setHeader("MsgType", simple("CDM:WP_TX"))
-                            .setBody(simple("Dies ist eine CDM von Olympic vom Type WP_TX"))
                             .choice()
                                 .when(simple("${header.MsgType} == 'CDM:WP_TX'"))
                                     .setProperty("originalMessageBody", body())
@@ -66,7 +65,12 @@ public class AdhocRouteTest {
 
         // expectations
         mock.setExpectedMessageCount(1);
+        mock.expectedBodiesReceived("Hello Adhoc");
+
+        // invoke consumer
         template.sendBody("direct:start", "Hello Adhoc");
+
+        // asserting mock is satisfied
         mock.assertIsSatisfied();
 
     }
